@@ -23,24 +23,24 @@
 					</div>	
 				<div class="footer-menu">						
 				<?$APPLICATION->IncludeComponent(
-					"bitrix:menu", 
-					".default", 
-					array(
-						"ROOT_MENU_TYPE" => "bottom",
-						"MENU_CACHE_TYPE" => "Y",
-						"MENU_CACHE_TIME" => "36000000",
-						"MENU_CACHE_USE_GROUPS" => "Y",
-						"MENU_CACHE_GET_VARS" => array(
-						),
-						"MAX_LEVEL" => "1",
-						"CHILD_MENU_TYPE" => "bottom",
-						"USE_EXT" => "N",
-						"ALLOW_MULTI_SELECT" => "N",
-						"COMPONENT_TEMPLATE" => ".default",
-						"DELAY" => "N"
-					),
-					false
-				);?>
+	"bitrix:menu", 
+	"bottom", 
+	array(
+		"ROOT_MENU_TYPE" => "bottom",
+		"MENU_CACHE_TYPE" => "Y",
+		"MENU_CACHE_TIME" => "36000000",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "bottom",
+		"USE_EXT" => "N",
+		"ALLOW_MULTI_SELECT" => "N",
+		"COMPONENT_TEMPLATE" => "bottom",
+		"DELAY" => "N"
+	),
+	false
+);?>
 				</div>
 				<div class="footer-menu-add">
 					<a href="#">Ваша безопасность</a>

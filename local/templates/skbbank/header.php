@@ -14,10 +14,9 @@ IncludeTemplateLangFile(__FILE__);
 </head>
 <body>
 	<div class="panel"><?$APPLICATION->ShowPanel();?></div>
-		<div class="overhead">
+		<div class="body-container">
 			<div class="header">
-				<div class="header-info">
-					<div class="logo" style="width:150px;">
+					<div class="logo">
 						  <a href="/">
 							<svg viewBox="0 0 179 33">
 							  <g>
@@ -33,27 +32,28 @@ IncludeTemplateLangFile(__FILE__);
 							  </g>
 							</svg>
 						  </a>
-					</div>
+					</div>			
+				<div class="header-info">
 					<div class="top-menu">
 					<?$APPLICATION->IncludeComponent(
-						"bitrix:menu", 
-						".default", 
-						array(
-							"ROOT_MENU_TYPE" => "top",
-							"MENU_CACHE_TYPE" => "Y",
-							"MENU_CACHE_TIME" => "36000000",
-							"MENU_CACHE_USE_GROUPS" => "Y",
-							"MENU_CACHE_GET_VARS" => array(
-							),
-							"MAX_LEVEL" => "1",
-							"CHILD_MENU_TYPE" => "left",
-							"USE_EXT" => "N",
-							"ALLOW_MULTI_SELECT" => "N",
-							"COMPONENT_TEMPLATE" => ".default",
-							"DELAY" => "N"
-						),
-						false
-					);?>
+	"bitrix:menu", 
+	"top", 
+	array(
+		"ROOT_MENU_TYPE" => "top",
+		"MENU_CACHE_TYPE" => "Y",
+		"MENU_CACHE_TIME" => "36000000",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "left",
+		"USE_EXT" => "N",
+		"ALLOW_MULTI_SELECT" => "N",
+		"COMPONENT_TEMPLATE" => "top",
+		"DELAY" => "N"
+	),
+	false
+);?>
 					</div>
 					<div class="contacts">
 						<div class="phone">
@@ -65,40 +65,41 @@ IncludeTemplateLangFile(__FILE__);
 						<div class="choose-city">
 							<a href="#">Москва</a>
 						</div>
+						<div class="search">
+						<?$APPLICATION->IncludeComponent("bitrix:search.form", "flat", array(
+							"PAGE" => "#SITE_DIR#search/index.php"
+							),
+							false
+						);?>
+						</div>		
 					</div>
-					<div id="search" class="search">
-					<?$APPLICATION->IncludeComponent("bitrix:search.form", "flat", array(
-						"PAGE" => "#SITE_DIR#search/index.php"
-						),
-						false
-					);?>
-					</div>
-				</div>	
+				</div>				
 				<div class="header-crumbs">
-					<div class="crumbs">
+					<div class="breadcrumbs">
 						<?if($APPLICATION->GetCurPage(false)==SITE_DIR):?>
-							<div id="banner">
-								<div id="banner-image"><?$APPLICATION->IncludeFile(
-											SITE_DIR."include/banner.php",
-											Array(),
-											Array("MODE"=>"html")
-										);?></div>
-								<table cellspacing="0" id="banner-text">
-									<tr>
-										<td width="35%">&nbsp;</td>
-										<td>
-										<?$APPLICATION->IncludeFile(
-											SITE_DIR."include/banner_text.php",
-											Array(),
-											Array("MODE"=>"text")
-										);?>
-										</td>
-									</tr>
-								</table>
-								<div id="banner-overlay"></div>
+							<div class="breadcrumbs-menu">
+								<?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"crumbs", 
+	array(
+		"ROOT_MENU_TYPE" => "leftfirst",
+		"MENU_CACHE_TYPE" => "Y",
+		"MENU_CACHE_TIME" => "36000000",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "left",
+		"USE_EXT" => "N",
+		"ALLOW_MULTI_SELECT" => "N",
+		"COMPONENT_TEMPLATE" => "crumbs",
+		"DELAY" => "N"
+	),
+	false
+);?>
 							</div>
 						<?else:?>
-							<div id="breadcrumb">
+							<div class="breadcrumb">
 								<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", ".default", array(
 								"START_FROM" => "1",
 								"PATH" => "",
@@ -109,8 +110,11 @@ IncludeTemplateLangFile(__FILE__);
 							</div>					
 						<?endif?>				
 					</div>
-					<div class="header-banner" style="width:300px; height: 150px; background: black;">
-						<p>Banner Here</p>
+					<div class="header-links">
+						<ul>
+							<li><a href="#">Частным лицам</a></li>
+							<li><a href="#">Интернет-банк</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
