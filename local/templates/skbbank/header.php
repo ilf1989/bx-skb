@@ -8,12 +8,13 @@ IncludeTemplateLangFile(__FILE__);
 	<title><?$APPLICATION->ShowTitle()?></title>
 	<link rel="apple-touch-icon" sizes="180x180" href="/local/templates/skbbank/images/logo/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/local/templates/skbbank/images/logo/favicon-32x32.png">	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/common.css" />
 	<?$APPLICATION->ShowHead();?>
 	<link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/colors.css" />		
 </head>
 <body>
-	<div class="panel"><?$APPLICATION->ShowPanel();?></div>
+<?$APPLICATION->ShowPanel();?>
 		<div class="body-container">
 			<div class="header">
 					<div class="logo">
@@ -36,24 +37,24 @@ IncludeTemplateLangFile(__FILE__);
 				<div class="header-info">
 					<div class="top-menu">
 					<?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"top", 
-	array(
-		"ROOT_MENU_TYPE" => "top",
-		"MENU_CACHE_TYPE" => "Y",
-		"MENU_CACHE_TIME" => "36000000",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MAX_LEVEL" => "1",
-		"CHILD_MENU_TYPE" => "left",
-		"USE_EXT" => "N",
-		"ALLOW_MULTI_SELECT" => "N",
-		"COMPONENT_TEMPLATE" => "top",
-		"DELAY" => "N"
-	),
-	false
-);?>
+						"bitrix:menu", 
+						"top", 
+						array(
+							"ROOT_MENU_TYPE" => "top",
+							"MENU_CACHE_TYPE" => "Y",
+							"MENU_CACHE_TIME" => "36000000",
+							"MENU_CACHE_USE_GROUPS" => "Y",
+							"MENU_CACHE_GET_VARS" => array(
+							),
+							"MAX_LEVEL" => "1",
+							"CHILD_MENU_TYPE" => "left",
+							"USE_EXT" => "N",
+							"ALLOW_MULTI_SELECT" => "N",
+							"COMPONENT_TEMPLATE" => "top",
+							"DELAY" => "N"
+						),
+						false
+					);?>
 					</div>
 					<div class="contacts">
 						<div class="phone">
@@ -79,24 +80,24 @@ IncludeTemplateLangFile(__FILE__);
 						<?if($APPLICATION->GetCurPage(false)==SITE_DIR):?>
 							<div class="breadcrumbs-menu">
 								<?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"crumbs", 
-	array(
-		"ROOT_MENU_TYPE" => "leftfirst",
-		"MENU_CACHE_TYPE" => "Y",
-		"MENU_CACHE_TIME" => "36000000",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MAX_LEVEL" => "1",
-		"CHILD_MENU_TYPE" => "left",
-		"USE_EXT" => "N",
-		"ALLOW_MULTI_SELECT" => "N",
-		"COMPONENT_TEMPLATE" => "crumbs",
-		"DELAY" => "N"
-	),
-	false
-);?>
+									"bitrix:menu", 
+									"crumbs", 
+									array(
+										"ROOT_MENU_TYPE" => "leftfirst",
+										"MENU_CACHE_TYPE" => "Y",
+										"MENU_CACHE_TIME" => "36000000",
+										"MENU_CACHE_USE_GROUPS" => "Y",
+										"MENU_CACHE_GET_VARS" => array(
+										),
+										"MAX_LEVEL" => "1",
+										"CHILD_MENU_TYPE" => "left",
+										"USE_EXT" => "N",
+										"ALLOW_MULTI_SELECT" => "N",
+										"COMPONENT_TEMPLATE" => "crumbs",
+										"DELAY" => "N"
+									),
+									false
+								);?>
 							</div>
 						<?else:?>
 							<div class="breadcrumb">
