@@ -1,7 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Новости банка");
-?><?$APPLICATION->IncludeComponent(
+?>
+Главная страница
+<?/*
+	$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	".default",
 	Array(
@@ -50,4 +53,4 @@ $APPLICATION->SetTitle("Новости банка");
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"AJAX_OPTION_ADDITIONAL" => ""
 	)
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);*/?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

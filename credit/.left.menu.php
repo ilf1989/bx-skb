@@ -1,39 +1,41 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Кредиты", 
-		"credit/", 
+		"Информация о компании", 
+		"index.php",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Карты", 
-		"card/", 
+		"История", 
+		"history.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Вклады", 
-		"deposites/", 
+		"Миссия", 
+		"mission.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Ипотека", 
-		"mortgage/", 
+		"Руководство", 
+		"management/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
+
 	Array(
-		"Услуги и сервисы", 
-		"services/", 
+		"Вакансии", 
+		"vacancies.php", 
 		Array(), 
 		Array(), 
 		"" 
 	)
+
 );
 ?>
