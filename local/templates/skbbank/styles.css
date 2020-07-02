@@ -18,6 +18,11 @@ a {
 	color: unset;
 }
 
+.flex {
+	display: flex;
+	justify-content: space-between;
+}
+
 	/*/ Header /*/
 
 .header .logo {
@@ -124,21 +129,21 @@ ul.left-menu {
 	
 .main-slide {
 	background: #eaebee;
-	height: 300px;
+	height: 430px;
 	border-radius: 30px;
 	display: flex;
 	justify-content: space-between;
 }	
 
 .main-slide-left {
-	padding: 60px;
+	padding: 100px 60px;
 }
 
 .main-slide-right {
 	
 }
 
-.main-slide-btn {
+.main-slide-btn, .card-slide-btn, .main-promo-btn {
 	padding: 20px 30px;
 	border-color: #f65e64;
 	border-radius: 30px;
@@ -146,6 +151,71 @@ ul.left-menu {
 	color: #fff;
 	font-size: 20px;
 	font-family: Monospace;
+}
+
+.main-promo-block {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-slide {
+	display: flex;
+	justify-content: space-between;
+	max-width: 880px;
+	height: 370px; 
+	background: #f2f2f2;
+	border-radius: 20px;
+}
+
+.card-slide-left {
+    display: flex;
+	justify-content: center;
+    flex-flow: column;
+	margin-left: 60px;
+}
+
+.card-slide-right {
+    display: flex;
+    align-items: center;
+    margin-right: 80px;
+}
+
+.card-slide-offer {
+	max-width: 200px;
+}
+
+.card-slide-offer-block {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-slide-image {
+	max-width: 270px;
+}
+
+.card-slide-btn { 
+	max-width: 250px;
+	margin: 0 auto;
+}
+
+
+.main-promo {
+	width: 90%;
+	height: 370px;
+	margin-left: 10%;
+	background: #f2f2f2;
+	border-radius: 20px;
+	position: relative;
+}
+
+.main-promo-left {
+    padding: 40px;
+}
+
+.main-promo-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 	/*/ Footer /*/
