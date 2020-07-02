@@ -58,7 +58,7 @@
 </ul>
 				</div>
 				<div class="footer-menu-add">
-					<a href="#">Ваша безопасность</a>
+					<a href="#"><i class="fa fa-shield"></i>Ваша безопасность</a>
 					<a href="#">Карта сайта</a>
 				</div>
 			</div>	
@@ -87,19 +87,22 @@
 					Курс валют
 					</div>
 					<div class="footer-contacts">
-						<div id="telephone"><nobr><?$APPLICATION->IncludeFile(
+						<div class="phone"><?$APPLICATION->IncludeFile(
 									SITE_DIR."include/phone.php",
 									Array(),
 									Array("MODE"=>"html")
-								);?></nobr></div>
-						
-						<div id="schedule"><div class="schedule">
+								);?>
+						</div>
+						<div class="contact-link">
+							<a href="#">Обратная связь</a>
+						</div>
+						<div class="schedule">
 						<?$APPLICATION->IncludeFile(
 									SITE_DIR."include/shedule.php",
 									Array(),
 									Array("MODE"=>"html")
 								);?>
-						</div></div>
+						</div>
 						
 						<div id="support">
 							<div id="support-question"></div>
@@ -127,13 +130,11 @@
 		<div class="footer-full-banner">
 			<div class="footer-banner">
 				<div class="copyright">
-				© СКБ-банк, 2020 Генеральная лицензия № 705 <br>
-				Центрального банка Российской Федерации
-					<?/*$APPLICATION->IncludeFile(
+					<?$APPLICATION->IncludeFile(
 						SITE_DIR."include/copyright.php",
 						Array(),
 						Array("MODE"=>"html")
-					);*/?>
+					);?>
 				</div>
 				<div class="footer-social">
 					<ul>

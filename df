@@ -1,0 +1,29 @@
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   local/templates/skbbank/components/bitrix/menu/bottom/template.php
+#	new file:   local/templates/skbbank/components/bitrix/menu/crumbs/template.php
+#	new file:   local/templates/skbbank/components/bitrix/menu/top/template.php
+#	new file:   local/templates/skbbank/components/bitrix/news.list/main_slider/.parameters.php
+#	new file:   local/templates/skbbank/components/bitrix/news.list/main_slider/css/owl.carousel.min.css
+#	new file:   local/templates/skbbank/components/bitrix/news.list/main_slider/css/owl.theme.default.min.css
+#	new file:   local/templates/skbbank/components/bitrix/news.list/main_slider/js/owl.carousel.min.js
+#	new file:   local/templates/skbbank/components/bitrix/news.list/main_slider/style.css
+#	new file:   local/templates/skbbank/components/bitrix/news.list/main_slider/template.php
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    about/.left.menu.php
+#	deleted:    about/.leftfirst.menu.php
+#	deleted:    about/.section.php
+#	deleted:    about/history.php
+#	deleted:    about/index.php
+#	deleted:    about/management/index.php
+#	deleted:    about/mission.php
+#	deleted:    about/vacancies.php
+#	deleted:    news/.section.php
+#	deleted:    news/index.php
+#

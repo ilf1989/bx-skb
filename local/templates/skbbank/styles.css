@@ -3,7 +3,7 @@ body {
 	font-size: 14px;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 .body-container {
@@ -122,6 +122,32 @@ ul.left-menu {
 	margin: 0 auto;	
 }	
 	
+.main-slide {
+	background: #eaebee;
+	height: 300px;
+	border-radius: 30px;
+	display: flex;
+	justify-content: space-between;
+}	
+
+.main-slide-left {
+	padding: 60px;
+}
+
+.main-slide-right {
+	
+}
+
+.main-slide-btn {
+	padding: 20px 30px;
+	border-color: #f65e64;
+	border-radius: 30px;
+	background: #f65e64;
+	color: #fff;
+	font-size: 20px;
+	font-family: Monospace;
+}
+
 	/*/ Footer /*/
 	
 .footer {

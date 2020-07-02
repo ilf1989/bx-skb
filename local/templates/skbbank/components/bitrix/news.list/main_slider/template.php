@@ -16,23 +16,26 @@ $this->addExternalJs($this->GetFolder().'/js/owl.carousel.min.js');
 ?>
 <div class="owl-carousel">
 <?foreach($arResult["ITEMS"] as $arItem):?>
-	<div>
-		<?if($arParams["DISPLAY_NAME"]!="N" && $arItem["NAME"]):?>
-			<?if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
-				<a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><?echo $arItem["NAME"]?></a><br />
-			<?else:?>
-				<?echo $arItem["NAME"]?><br />
-			<?endif;?>
-		<?endif;?>
-			<?echo $arItem["DETAIL_TEXT"];?>
-		<?if($arParams["DISPLAY_PREVIEW_TEXT"]!="N" && $arItem["PREVIEW_TEXT"]):?>
-			<br><a href="<?echo $arItem["CODE"]?>"><?echo $arItem["PREVIEW_TEXT"];?></a>
-		<?endif;?>
+	<div class="main-slide">
+<pre style="display:none;">	<?print_r($arItem);?>	</pre>	
+		<div class="main-slide-left">
+			<h2 class="main-slide-title"><a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><?echo $arItem["NAME"]?></a></h2><br />
+			<p class="main-slide-text"><?echo $arItem["DETAIL_TEXT"];?></p>
+			<br>
+			<button class="main-slide-btn"><a href="<?echo $arItem["CODE"]?>"><?echo $arItem["PREVIEW_TEXT"];?></a></button>
+		</div>
+		<div class="main-slide-right">
+			<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>">
+		</div>
 	</div>
 <?endforeach;?>
 </div>
 <script>
 $(document).ready(function(){
-  $(".owl-carousel").owlCarousel();
+  $(".owl-carousel").owlCarousel({
+	  nav:true,
+	  dots:true,
+	  items:1
+  });
 });
 </script>
