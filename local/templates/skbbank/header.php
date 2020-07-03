@@ -47,8 +47,8 @@ IncludeTemplateLangFile(__FILE__);
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"MENU_CACHE_GET_VARS" => array(
 		),
-		"MAX_LEVEL" => "3",
-		"CHILD_MENU_TYPE" => "top",
+		"MAX_LEVEL" => "2",
+		"CHILD_MENU_TYPE" => "left",
 		"USE_EXT" => "Y",
 		"ALLOW_MULTI_SELECT" => "N",
 		"COMPONENT_TEMPLATE" => "top",
