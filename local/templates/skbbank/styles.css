@@ -143,7 +143,7 @@ ul.left-menu {
 	
 }
 
-.main-slide-btn, .card-slide-btn, .main-promo-btn {
+.main-slide-btn, .card-slide-btn, .main-promo-btn, .event-slide-btn {
 	padding: 20px 30px;
 	border-color: #f65e64;
 	border-radius: 30px;
@@ -161,7 +161,7 @@ ul.left-menu {
 .card-slide {
 	display: flex;
 	justify-content: space-between;
-	max-width: 880px;
+	width: 880px;
 	height: 370px; 
 	background: #f2f2f2;
 	border-radius: 20px;
@@ -216,6 +216,62 @@ ul.left-menu {
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+.main-credit {
+	width: 100%;
+	background: #eaebee;
+	padding-bottom: 20px;
+}
+
+.main-credit:before {
+	content:'';
+	position:absolute;
+	width:100%;
+	height:300px;
+	background:#eaebee;
+	left:0;
+	z-index:-1;
+}
+
+.main-credit-title {
+	padding: 50px;
+}
+
+.main-credit-block {
+	display: flex;
+	justify-content: space-between;
+	background: #fff;
+	padding: 20px;
+	border-radius: 20px;
+	margin: 20px;
+}
+
+.main-credit-left {
+	margin-left: 60px;
+}
+
+.main-credit-right {
+	background: #eaebee;
+	margin-right: 60px;
+	border-radius: 20px;
+	padding: 10px 50px;
+}
+
+.event-slide {
+	background: #f2f2f2;
+	border-radius: 20px;
+	padding: 20px 60px;
+}
+
+.main-news-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-news-item {
+	width: 20%;
+	margin-right: 5%;
 }
 
 	/*/ Footer /*/
