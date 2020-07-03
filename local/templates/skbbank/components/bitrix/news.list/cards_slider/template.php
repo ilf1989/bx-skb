@@ -18,7 +18,6 @@ $this->addExternalJs($this->GetFolder().'/js/owl.carousel.min.js');
 <div class="owl-carousel" style="width:880px;">
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<div class="card-slide" style="background: #f2f2f2 url('/local/templates/skbbank/components/bitrix/news.list/cards_slider/images/card_back.svg') 100% 100% no-repeat;">
-		<pre style="display:none;"><?print_r($arItem);?></pre>
 		<div class="card-slide-left">
 			<h2 class="card-slide-title"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h2><br />
 			<p class="card-slide-text"><?=$arItem["PREVIEW_TEXT"];?></p>

@@ -25,7 +25,7 @@
 				<div class="footer-top">
 					<div>
 						<div class="footer-menu">						
-				<?/*$APPLICATION->IncludeComponent(
+				<?$APPLICATION->IncludeComponent(
 					"bitrix:menu", 
 					"bottom", 
 					array(
@@ -43,19 +43,7 @@
 						"DELAY" => "N"
 					),
 					false
-				);*/?>
-<ul class="footer-menu">
-	<li><a href="/search/map.php">Карта сайта</a></li>
-	<li><a href="/contacts/">Контакты</a></li>
-	<li><a href="/auth.php">Вход на сайт</a></li>
-	<li><a href="/search/map.php">Карта сайта</a></li>
-	<li><a href="/contacts/">Контакты</a></li>
-	<li><a href="/auth.php">Вход на сайт</a></li>
-	<li><a href="/search/map.php">Карта сайта</a></li>
-	<li><a href="/contacts/">Контакты</a></li>
-	<li><a href="/search/map.php">Карта сайта</a></li>
-	<li><a href="/contacts/">Контакты</a></li>
-</ul>
+				);?>
 				</div>
 				<div class="footer-menu-add">
 					<a href="#"><i class="fa fa-shield"></i>Ваша безопасность</a>
