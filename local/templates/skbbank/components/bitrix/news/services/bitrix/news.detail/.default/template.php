@@ -12,84 +12,50 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="news-detail">
-	<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arResult["DETAIL_PICTURE"])):?>
-		<img
-			class="detail_picture"
-			border="0"
-			src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>"
-			width="<?=$arResult["DETAIL_PICTURE"]["WIDTH"]?>"
-			height="<?=$arResult["DETAIL_PICTURE"]["HEIGHT"]?>"
-			alt="<?=$arResult["DETAIL_PICTURE"]["ALT"]?>"
-			title="<?=$arResult["DETAIL_PICTURE"]["TITLE"]?>"
-			/>
-	<?endif?>
-	<?if($arParams["DISPLAY_DATE"]!="N" && $arResult["DISPLAY_ACTIVE_FROM"]):?>
-		<span class="news-date-time"><?=$arResult["DISPLAY_ACTIVE_FROM"]?></span>
-	<?endif;?>
-	<?if($arParams["DISPLAY_NAME"]!="N" && $arResult["NAME"]):?>
-		<h3><?=$arResult["NAME"]?></h3>
-	<?endif;?>
-	<?if($arParams["DISPLAY_PREVIEW_TEXT"]!="N" && $arResult["FIELDS"]["PREVIEW_TEXT"]):?>
-		<p><?=$arResult["FIELDS"]["PREVIEW_TEXT"];unset($arResult["FIELDS"]["PREVIEW_TEXT"]);?></p>
-	<?endif;?>
-	<?if($arResult["NAV_RESULT"]):?>
-		<?if($arParams["DISPLAY_TOP_PAGER"]):?><?=$arResult["NAV_STRING"]?><br /><?endif;?>
-		<?echo $arResult["NAV_TEXT"];?>
-		<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?><br /><?=$arResult["NAV_STRING"]?><?endif;?>
-	<?elseif(strlen($arResult["DETAIL_TEXT"])>0):?>
-		<?echo $arResult["DETAIL_TEXT"];?>
-	<?else:?>
-		<?echo $arResult["PREVIEW_TEXT"];?>
-	<?endif?>
-	<div style="clear:both"></div>
-	<br />
-	<?foreach($arResult["FIELDS"] as $code=>$value):
-		if ('PREVIEW_PICTURE' == $code || 'DETAIL_PICTURE' == $code)
-		{
-			?><?=GetMessage("IBLOCK_FIELD_".$code)?>:&nbsp;<?
-			if (!empty($value) && is_array($value))
-			{
-				?><img border="0" src="<?=$value["SRC"]?>" width="<?=$value["WIDTH"]?>" height="<?=$value["HEIGHT"]?>"><?
-			}
-		}
-		else
-		{
-			?><?=GetMessage("IBLOCK_FIELD_".$code)?>:&nbsp;<?=$value;?><?
-		}
-		?><br />
-	<?endforeach;
-	foreach($arResult["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
+<div class="service-preview-block">
+	<div class="service-preview-left">
+		<h1><?=$arResult["NAME"]?></h1>
+		<p><?=$arResult["PREVIEW_TEXT"]?></p>
+	</div>
+	<div class="service-preview-right">
+		<img src="<?=CFile::GetPath($arResult["PROPERTIES"]["AD_IMAGE"]["VALUE"])?>">
+	</div>
+</div>
 
-		<?=$arProperty["NAME"]?>:&nbsp;
-		<?if(is_array($arProperty["DISPLAY_VALUE"])):?>
-			<?=implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);?>
-		<?else:?>
-			<?=$arProperty["DISPLAY_VALUE"];?>
-		<?endif?>
-		<br />
-	<?endforeach;
-	if(array_key_exists("USE_SHARE", $arParams) && $arParams["USE_SHARE"] == "Y")
-	{
-		?>
-		<div class="news-detail-share">
-			<noindex>
-			<?
-			$APPLICATION->IncludeComponent("bitrix:main.share", "", array(
-					"HANDLERS" => $arParams["SHARE_HANDLERS"],
-					"PAGE_URL" => $arResult["~DETAIL_PAGE_URL"],
-					"PAGE_TITLE" => $arResult["~NAME"],
-					"SHORTEN_URL_LOGIN" => $arParams["SHARE_SHORTEN_URL_LOGIN"],
-					"SHORTEN_URL_KEY" => $arParams["SHARE_SHORTEN_URL_KEY"],
-					"HIDE" => $arParams["SHARE_HIDE"],
-				),
-				$component,
-				array("HIDE_ICONS" => "Y")
-			);
-			?>
-			</noindex>
-		</div>
-		<?
-	}
-	?>
+<div class="service-advantage-block">
+	<?foreach ($arResult["PROPERTIES"]["AD_ITEM"]["VALUE"] as $adv): $ADV = CIBlockElement::GetByID($adv)->GetNext(); ?>
+	<div>
+		<img src="<?=CFile::GetPath($ADV["PREVIEW_PICTURE"])?>">
+		<p><?=$ADV["NAME"]?></p>
+	</div>	
+	<?endforeach;?>
+</div>
+
+<div class="service-html-block">
+	<?echo $arResult["DETAIL_TEXT"];?>
+</div>
+
+<div class="service-docs-tab">
+	<h2>Тарифы и документы</h2>
+	<?foreach ($arResult["PROPERTIES"]["AD_DOCS"]["VALUE"] as $doc): $DOC = CFile::GetByID($doc)->GetNext(); ?>
+		<div>
+			<p><?=$DOC["ORIGINAL_NAME"]?></p>
+		</div>	
+	<?endforeach;?>
+</div>
+
+<div class="service-help-tab">
+	<?foreach ($arResult["PROPERTIES"]["AD_HELP"]["VALUE"] as $faq): $FAQ = CIBlockElement::GetByID($faq)->GetNext(); ?>
+		<div>
+			<p><?=$FAQ["NAME"]?></p>
+		</div>	
+	<?endforeach;?>
+</div>
+
+<div class="service-phone-block">
+	<?foreach ($arResult["PROPERTIES"]["AD_PHONE"]["VALUE"] as $phone): $PHONE = CIBlockElement::GetByID($phone)->GetNext(); ?>
+		<div>
+			<p><?=$PHONE["PREVIEW_TEXT"]?></p>
+		</div>	
+	<?endforeach;?>
 </div>

@@ -15,7 +15,7 @@ body {
 
 a {
 	text-decoration: none;
-	color: unset;
+	color: darkslateblue;
 }
 
 .flex {
@@ -384,6 +384,33 @@ ul.left-menu {
 	font-size: 14px;
 	font-family: Monospace;
 	color: green;
+}
+
+	/*/ Services /*/
+
+.service-preview-block {
+	background: #f9f9f9;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.service-preview-block:before {
+	position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    z-index: -1;
+    content: '';
+    border-radius: 30px;
+    background: #f9f9f9;
+}
+
+.service-advantage-block {
+	display: flex;
+	justify-content: space-between;
+	background: #f2f2f2;
 }
 
 	/*/ Footer /*/
