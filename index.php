@@ -3,9 +3,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("");
 ?><div class="main-promo-block">
 	 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"cards_slider",
-	Array(
+	"bitrix:news.list", 
+	"cards_slider", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -26,11 +26,14 @@ $APPLICATION->SetTitle("");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(0=>"",1=>"",),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "6",
-		"IBLOCK_TYPE" => "cards",
+		"IBLOCK_ID" => "9",
+		"IBLOCK_TYPE" => "products",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
@@ -45,7 +48,14 @@ $APPLICATION->SetTitle("");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(0=>"offer_1",1=>"text_1",2=>"offer_2",3=>"text_2",4=>"",),
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "offer_1",
+			2 => "text_1",
+			3 => "offer_2",
+			4 => "text_2",
+			5 => "",
+		),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "N",
@@ -58,7 +68,8 @@ $APPLICATION->SetTitle("");
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N"
-	)
+	),
+	false
 );?><?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"single_promo",

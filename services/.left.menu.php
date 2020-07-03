@@ -1,29 +1,78 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Для частных лиц", 
-		"fiz/", 
+		"Биометрическая идентификация", 
+		"services/fiz/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Малому и среднему бизнесу", 
-		"smallbusiness/", 
+		"Аренда сейфовых ячеек", 
+		"services/smallbusiness/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Для корпоративных клиентов", 
-		"corp/", 
+		"СКБ-онлайн", 
+		"services/corp/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Финансовым организациям", 
-		"financialorg/", 
+		"Перевод с карты на карту", 
+		"services/financialorg/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Оплата услуг", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Google pay", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Денежные переводы", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Туристическая страховка", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Apple pay", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Курсы валюты", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Samsung pay", 
+		"", 
 		Array(), 
 		Array(), 
 		"" 
