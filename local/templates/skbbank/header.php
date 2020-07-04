@@ -195,4 +195,4 @@ IncludeTemplateLangFile(__FILE__);
 					);?>	
 				<?endif?>		
 			<div class="main-content">			
-				<h1><?$APPLICATION->ShowTitle(false);?></h1> 
+				<h1 style="display:none;"><?$APPLICATION->ShowTitle(false);?></h1> 

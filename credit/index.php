@@ -1,7 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Информация о компании");
-?><?$APPLICATION->IncludeComponent(
+$APPLICATION->SetTitle("");
+?>
+<h1><?$APPLICATION->ShowTitle(false);?></h1> 
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"cards_list", 
 	array(
@@ -48,8 +50,13 @@ $APPLICATION->SetTitle("Информация о компании");
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "OFFER_1",
+			1 => "TEXT_1",
+			2 => "OFFER_2",
+			3 => "TEXT_2",
+			4 => "OFFER_3",
+			5 => "TEXT_3",
+			6 => "",
 		),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",

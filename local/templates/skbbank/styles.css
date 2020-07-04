@@ -420,7 +420,8 @@ ul.left-menu {
 }
 
 .credit-list-item {
-    display: inline-block;
+    display: inline-flex;
+	justify-content: space-between;
 	width: 48%;
     height: 370px;
     background: #f2f2f2;
@@ -430,6 +431,31 @@ ul.left-menu {
 
 .credit-list-item:first-child {
 	width: 100%;
+}
+
+.credit-list-left {
+    display: flex;
+	justify-content: center;
+    flex-flow: column;
+	margin-left: 60px;
+}
+
+.credit-list-offer {
+	max-width: 200px;
+}
+
+.credit-list-offer-block {
+	display: flex;
+	justify-content: space-between;
+}
+
+.credit-list-right {
+    display: flex;
+    align-items: center;
+}
+
+.credit-list-image {
+	height: 100%;
 }
 
 .credit-get {

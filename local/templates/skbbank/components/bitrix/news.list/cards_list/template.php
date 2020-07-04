@@ -14,25 +14,25 @@ $this->setFrameMode(true);
 ?>
 <div class="credit-list-block">
 <?foreach($arResult["ITEMS"] as $arItem):?>
-	<div class="credit-list-item" style="background: #f2f2f2 url('/local/templates/skbbank/components/bitrix/news.list/cards_slider/images/card_back.svg') 100% 100% no-repeat;">
-		<div class="card-slide-left">
-			<h2 class="card-slide-title"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h2><br />
-			<p class="card-slide-text"><?=$arItem["PREVIEW_TEXT"];?></p>
+	<div class="credit-list-item">
+		<div class="credit-list-left">
+			<h2 class="credit-list-title"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h2><br />
+			<p class="credit-list-text"><?=$arItem["PREVIEW_TEXT"];?></p>
 			<br>
-			<div class="card-slide-offer-block">
-				<div class="card-slide-offer">
+			<div class="credit-list-offer-block">
+				<div class="credit-list-offer">
 					<p><?=$arItem["PROPERTIES"]["OFFER_1"]["VALUE"]?></p>
 					<p><?=$arItem["PROPERTIES"]["TEXT_1"]["VALUE"]?></p>
 				</div>
-				<div class="card-slide-offer">
+				<div class="credit-list-offer">
 					<p><?=$arItem["PROPERTIES"]["OFFER_2"]["VALUE"]?></p>
 					<p><?=$arItem["PROPERTIES"]["TEXT_2"]["VALUE"]?></p>
 				</div>
 			</div>
-			<button class="card-slide-btn">Оформить карту</button>
+			<button class="credit-list-btn">Оформить карту</button>
 		</div>
-		<div class="card-slide-right">
-			<img class="card-slide-image" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>">
+		<div class="credit-list-right">
+			<img class="credit-list-image" src="<?=CFile::GetPath($arItem["PROPERTIES"]["IMAGE"]["VALUE"])?>">
 		</div>
 	</div>
 <?endforeach;?>
