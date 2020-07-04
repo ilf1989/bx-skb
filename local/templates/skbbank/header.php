@@ -4,6 +4,7 @@ IncludeTemplateLangFile(__FILE__);
 ?>
 <!DOCTYPE html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title><?$APPLICATION->ShowTitle()?></title>
 	<link rel="apple-touch-icon" sizes="180x180" href="/local/templates/skbbank/images/logo/apple-touch-icon.png">
@@ -193,5 +194,5 @@ IncludeTemplateLangFile(__FILE__);
 						false
 					);?>	
 				<?endif?>		
-			<div class="main-content">					
-				<h1 style="display:none;"><?$APPLICATION->ShowTitle(false);?></h1> 
+			<div class="main-content">			
+				<h1><?$APPLICATION->ShowTitle(false);?></h1> 

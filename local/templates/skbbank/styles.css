@@ -413,6 +413,52 @@ ul.left-menu {
 	background: #f2f2f2;
 }
 
+	/*/ Credit  /*/
+
+.credit-list-block {
+	text-align: center;
+}
+
+.credit-list-item {
+    display: inline-block;
+	width: 48%;
+    height: 370px;
+    background: #f2f2f2;
+    border-radius: 20px;
+	margin:0 10px 50px;
+}
+
+.credit-list-item:first-child {
+	width: 100%;
+}
+
+.credit-get {
+	display: flex;
+	justify-content: space-between;
+}
+
+.credit-get > div {
+	width: 23%;
+	margin: 1%;
+	padding: 2%;
+	height: 300px;
+}
+
+.credit-get-step {
+	position: relative;
+	background: #f2f2f2;
+	border-radius: 20px;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-end;
+}
+
+.credit-get-image {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
 	/*/ Footer /*/
 	
 .footer {

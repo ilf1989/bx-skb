@@ -17,13 +17,12 @@ $this->addExternalJs($this->GetFolder().'/js/owl.carousel.min.js');
 ?>
 <div class="owl-carousel">
 <?foreach($arResult["ITEMS"] as $arItem):?>
-	<div class="main-slide">
-<pre style="display:none;">	<?print_r($arItem);?>	</pre>	
+	<div class="main-slide">	
 		<div class="main-slide-left">
-			<h2 class="main-slide-title"><a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><?echo $arItem["NAME"]?></a></h2><br />
-			<p class="main-slide-text"><?echo $arItem["DETAIL_TEXT"];?></p>
+			<h2 class="main-slide-title"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h2><br />
+			<p class="main-slide-text"><?=$arItem["DETAIL_TEXT"];?></p>
 			<br>
-			<button class="main-slide-btn"><a href="<?echo $arItem["CODE"]?>"><?echo $arItem["PREVIEW_TEXT"];?></a></button>
+			<button class="main-slide-btn"><a href="<?=$arItem["CODE"]?>"><?=$arItem["PREVIEW_TEXT"];?></a></button>
 		</div>
 		<div class="main-slide-right">
 			<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>">

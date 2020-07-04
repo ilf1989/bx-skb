@@ -12,10 +12,9 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="card-list-block">
+<div class="credit-list-block">
 <?foreach($arResult["ITEMS"] as $arItem):?>
-<div class="card-list-row">
-	<div class="card-slide" style="background: #f2f2f2 url('/local/templates/skbbank/components/bitrix/news.list/cards_slider/images/card_back.svg') 100% 100% no-repeat;">
+	<div class="credit-list-item" style="background: #f2f2f2 url('/local/templates/skbbank/components/bitrix/news.list/cards_slider/images/card_back.svg') 100% 100% no-repeat;">
 		<div class="card-slide-left">
 			<h2 class="card-slide-title"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h2><br />
 			<p class="card-slide-text"><?=$arItem["PREVIEW_TEXT"];?></p>
@@ -36,7 +35,6 @@ $this->setFrameMode(true);
 			<img class="card-slide-image" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>">
 		</div>
 	</div>
-</div>
 <?endforeach;?>
 </div>
 <script>
