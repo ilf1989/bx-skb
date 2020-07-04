@@ -1,31 +1,68 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Информация о компании");
-?>
-<b>&laquo;Банк&raquo;</b> &mdash; один из крупнейших участников российского рынка банковских услуг. Банк работает в России с 1997 года и на сегодняшний день осуществляет все основные виды банковских операций, представленных на рынке финансовых услуг. Сеть банка формируют 490 филиалов и дополнительных офисов в 70 регионах страны. Мы предлагаем клиентам основные банковские продукты, принятые в международной финансовой практике.
-<p></p>
- 									
-<p>ЗАО &laquo;Банк&raquo; занимает 7-е место по размеру активов по результатам 2009 года. Банк находится на 5-м месте в России по объему частных депозитов и на 4-м месте по объему кредитов для частных лиц по результатам 2009 года. 									<b>&laquo;Банк&raquo;</b> является универсальным банком и оказывает полный спектр услуг, включая обслуживание частных и корпоративных клиентов, инвестиционный банковский бизнес, торговое финансирование и управление активами.</p>
- 									В числе предоставляемых услуг: 									
-<ul> 									
-  <li>выпуск банковских карт;</li>
- 									
-  <li>ипотечное и потребительское кредитование;</li>
- 									
-  <li>автокредитование;</li>
- 									
-  <li>услуги дистанционного управления счетами;</li>
- 									
-  <li>кредитные карты с льготным периодом;</li>
- 									
-  <li>срочные вклады, аренда сейфовых ячеек;</li>
- 									
-  <li>денежные переводы.</li>
- 									</ul>
- 									
-<p>Часть услуг доступна нашим клиентам в круглосуточном режиме, для чего используются современные телекоммуникационные технологии.</p>
- 									
-<p><b>&laquo;Банк&raquo;</b> является одним из самых надежных банков нашей страны. Основными ценностями, которыми мы руководствуемся в своей деятельности являются <i><b>справедливость</b></i>,<i><b> прозрачность</b></i><b></b>, <i><b>уважение</b></i><b></b>, <i><b>сотрудничество</b></i><b></b>,<i><b> свобода</b></i><b></b> и<i><b> доверие</b></i><b></b>. Одной из главных задач <b>&laquo;Банк&raquo;</b> видит поддержание и совершенствование развитой финансовой системы России.</p>
- 									
-<p>В качестве одного из приоритетных направлений культурно-просветительской деятельности <b>&laquo;Банк&raquo;</b> осуществляет поддержку национального. При нашем содействии Россию посетили многие всемирно известные зарубежные музыканты, в регионах России ежегодно проходят театральные фестивали, концерты и многочисленные выставки.</p>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+?><?$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"cards_list", 
+	array(
+		"COMPONENT_TEMPLATE" => "cards_list",
+		"IBLOCK_TYPE" => "products",
+		"IBLOCK_ID" => "10",
+		"NEWS_COUNT" => "20",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_ORDER1" => "DESC",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER2" => "ASC",
+		"FILTER_NAME" => "",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "36000000",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"SET_TITLE" => "Y",
+		"SET_BROWSER_TITLE" => "Y",
+		"SET_META_KEYWORDS" => "Y",
+		"SET_META_DESCRIPTION" => "Y",
+		"SET_LAST_MODIFIED" => "N",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"STRICT_SECTION_CHECK" => "N",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"PAGER_TEMPLATE" => ".default",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"PAGER_TITLE" => "Новости",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"SET_STATUS_404" => "N",
+		"SHOW_404" => "N",
+		"MESSAGE_404" => ""
+	),
+	false
+);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
