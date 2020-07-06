@@ -13,6 +13,7 @@
 $this->setFrameMode(true);
 $this->addExternalCss($this->GetFolder().'/css/owl.carousel.min.css');
 $this->addExternalCss($this->GetFolder().'/css/owl.theme.default.min.css');
+$this->addExternalJs($this->GetFolder().'/js/jquery.min.js');
 $this->addExternalJs($this->GetFolder().'/js/owl.carousel.min.js');
 ?>
 <div class="owl-carousel" style="width:880px;">

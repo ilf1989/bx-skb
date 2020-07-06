@@ -11,9 +11,7 @@ IncludeTemplateLangFile(__FILE__);
 	<link rel="icon" type="image/png" sizes="32x32" href="/local/templates/skbbank/images/logo/favicon-32x32.png">	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://kit.fontawesome.com/1a6e45b059.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/common.css" />
-	<?$APPLICATION->ShowHead();?>
-	<link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/colors.css" />		
+	<?$APPLICATION->ShowHead();?>	
 </head>
 <body>
 <?$APPLICATION->ShowPanel();?>
@@ -116,7 +114,7 @@ IncludeTemplateLangFile(__FILE__);
 					<div class="header-links">
 						<ul>
 							<li><a href="#">Частным лицам</a></li>
-							<li><a href="#">Интернет-банк</a></li>
+							<li class="header-online-bank"><a href="#">Интернет-банк</a></li>
 						</ul>
 					</div>
 				</div>

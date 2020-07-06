@@ -25,31 +25,31 @@
 				<div class="footer-top">
 					<div>
 						<div class="footer-menu">						
-				<?$APPLICATION->IncludeComponent(
-					"bitrix:menu", 
-					"bottom", 
-					array(
-						"ROOT_MENU_TYPE" => "bottom",
-						"MENU_CACHE_TYPE" => "Y",
-						"MENU_CACHE_TIME" => "36000000",
-						"MENU_CACHE_USE_GROUPS" => "Y",
-						"MENU_CACHE_GET_VARS" => array(
-						),
-						"MAX_LEVEL" => "1",
-						"CHILD_MENU_TYPE" => "bottom",
-						"USE_EXT" => "N",
-						"ALLOW_MULTI_SELECT" => "N",
-						"COMPONENT_TEMPLATE" => "bottom",
-						"DELAY" => "N"
-					),
-					false
-				);?>
-				</div>
-				<div class="footer-menu-add">
-					<a href="#"><i class="fa fa-shield"></i>Ваша безопасность</a>
-					<a href="#">Карта сайта</a>
-				</div>
-			</div>	
+						<?$APPLICATION->IncludeComponent(
+							"bitrix:menu", 
+							"bottom", 
+							array(
+								"ROOT_MENU_TYPE" => "bottom",
+								"MENU_CACHE_TYPE" => "Y",
+								"MENU_CACHE_TIME" => "36000000",
+								"MENU_CACHE_USE_GROUPS" => "Y",
+								"MENU_CACHE_GET_VARS" => array(
+								),
+								"MAX_LEVEL" => "1",
+								"CHILD_MENU_TYPE" => "bottom",
+								"USE_EXT" => "N",
+								"ALLOW_MULTI_SELECT" => "N",
+								"COMPONENT_TEMPLATE" => "bottom",
+								"DELAY" => "N"
+							),
+							false
+						);?>
+						</div>
+						<div class="footer-menu-add">
+							<a href="#" class="footer-menu-safety"><i class="fa fa-shield"></i>Ваша безопасность</a>
+							<a href="#" class="footer-menu-sitemap">Карта сайта</a>
+						</div>
+					</div>	
 					<div id="sidebar-inner">
 					<?/*$APPLICATION->IncludeComponent(
 						"bitrix:main.include",
@@ -61,17 +61,7 @@
 							"EDIT_MODE" => "html", 
 							"EDIT_TEMPLATE" => "page_inc.php" 
 							)
-					);?><?$APPLICATION->IncludeComponent(
-						"bitrix:main.include",
-						".default",
-						Array(
-							"AREA_FILE_SHOW" => "sect", 
-							"AREA_FILE_SUFFIX" => "inc", 
-							"AREA_FILE_RECURSIVE" => "Y", 
-							"EDIT_MODE" => "html", 
-							"EDIT_TEMPLATE" => "sect_inc.php" 
-						)
-					);*/?>
+					);?>*/?>
 					Курс валют
 					</div>
 					<div class="footer-contacts">
@@ -81,7 +71,7 @@
 									Array("MODE"=>"html")
 								);?>
 						</div>
-						<div class="contact-link">
+						<div class="footer-contact-link">
 							<a href="#">Обратная связь</a>
 						</div>
 						<div class="schedule">
@@ -112,7 +102,11 @@
 			</div>
 			<div class="footer-link-block">
 				<a href="#">Наш акционер Синара</a>
-				<a href="#">Банковская группа СКБ-Банка</a>
+				<p>Банковская группа СКБ-банка:</p>
+				<a class="footer-link-skb" href="#">СКБ-банк</a>
+				<a class="footer-link-skb" href="#">СКБ-финанс</a>
+				<a class="footer-link-skb" href="#">Газэнергобанк</a>
+				<a class="footer-link-skb" href="#">SKB LAB</a>
 			</div>				
 		</div>
 		<div class="footer-full-banner">
@@ -126,19 +120,19 @@
 				</div>
 				<div class="footer-social">
 					<ul>
-						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
+						<li><a href="#"><img src="/include/fb.svg"></a></li>
+						<li><a href="#"><img src="/include/vk.svg"></a></li>
+						<li><a href="#"><img src="/include/inst.svg"></a></li>
+						<li><a href="#"><img src="/include/ok.svg"></a></li>
 					</ul>
 				</div>
 				<div class="footer-apps">
 					<ul>
-						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
+						<li><a href="#"><img src="/include/app_store_footer.svg"></a></li>
+						<li><a href="#"><img src="/include/google_play_footer.svg"></a></li>
 					</ul>
 				</div>
-				<div class="footer-webmaster">Разработано</div>
+				<div class="footer-webmaster">Разработал Илья Федоров</div>
 			</div>
 		</div>
 		</footer>

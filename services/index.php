@@ -97,19 +97,4 @@ $APPLICATION->SetTitle("Услуги и сервисы");
 		)
 	),
 	false
-);?><?$APPLICATION->IncludeComponent(
-	"bitrix:menu",
-	"help",
-	Array(
-		"ALLOW_MULTI_SELECT" => "N",
-		"CHILD_MENU_TYPE" => "help",
-		"DELAY" => "N",
-		"MAX_LEVEL" => "1",
-		"MENU_CACHE_GET_VARS" => array(""),
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"ROOT_MENU_TYPE" => "help",
-		"USE_EXT" => "Y"
-	)
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

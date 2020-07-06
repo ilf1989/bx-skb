@@ -40,12 +40,3 @@ $this->setFrameMode(true);
 	</div>
 <?endforeach;?>
 </div>
-
-<div class="service-docs-tab">
-	<h2>Тарифы и документы</h2>
-
-</div>
-
-<div class="service-phone-block">
-
-</div>

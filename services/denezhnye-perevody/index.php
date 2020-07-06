@@ -1,16 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Денежные переводы");
-?><div class="service-preview-block">
-	<div class="service-preview-left">
-		<h1><?=$arResult["NAME"]?></h1>
-		<p>
-			 <?=$arResult["PREVIEW_TEXT"]?>
-		</p>
-	</div>
-	<div class="service-preview-right">
-	</div>
-</div>
+?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"paysystem_block", 
@@ -80,4 +71,24 @@ $APPLICATION->SetTitle("Денежные переводы");
 		"COMPONENT_TEMPLATE" => "paysystem_block"
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+<div class="service-docs-tab">
+	<h2>Тарифы и документы</h2>
+		<div>
+			<p>Тарифы на переводы юридических лиц, индивидуальных предпринимателей и лиц, занимающихся частной практикой</p>
+		</div>
+		<div>
+			<p>Тарифы на переводы по Системе быстрых платежей (СБП)</p>
+		</div>
+		<div>
+			<p>Тарифы на переводы</p>
+		</div>		
+</div>
+
+<div class="service-phone-block">
+	<div>
+		<img src="/include/phone.PNG">
+		<p>По всем интересующим Вас вопросам Вы можете обращаться в Контакт-центр Банка: 8 (343) 355–75–75 или 8-800-1000-600 (звонок бесплатный)</p>
+	</div>	
+</div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
