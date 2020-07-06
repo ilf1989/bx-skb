@@ -16,7 +16,7 @@ $this->addExternalCss($this->GetFolder().'/css/owl.theme.default.min.css');
 $this->addExternalJs($this->GetFolder().'/js/jquery.min.js');
 $this->addExternalJs($this->GetFolder().'/js/owl.carousel.min.js');
 ?>
-<div class="owl-carousel" style="width:880px;">
+<div class="owl-carousel card-carousel">
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<div class="card-slide" style="background: #f2f2f2 url('/local/templates/skbbank/components/bitrix/news.list/cards_slider/images/card_back.svg') 100% 100% no-repeat;">
 		<div class="card-slide-left">

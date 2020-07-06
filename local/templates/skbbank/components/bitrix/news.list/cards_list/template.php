@@ -16,9 +16,8 @@ $this->setFrameMode(true);
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<div class="credit-list-item">
 		<div class="credit-list-left">
-			<h2 class="credit-list-title"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h2><br />
+			<h2 class="credit-list-title"><?=$arItem["NAME"]?></h2>
 			<p class="credit-list-text"><?=$arItem["PREVIEW_TEXT"];?></p>
-			<br>
 			<div class="credit-list-offer-block">
 				<div class="credit-list-offer">
 					<p><?=$arItem["PROPERTIES"]["OFFER_1"]["VALUE"]?></p>

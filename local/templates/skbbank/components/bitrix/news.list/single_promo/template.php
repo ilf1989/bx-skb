@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="owl-carousel2">
+<div class="main-promo-section">
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<div class="main-promo">
 		<div class="main-promo-left">
