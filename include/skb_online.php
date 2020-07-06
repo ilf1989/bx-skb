@@ -19,7 +19,9 @@
 			<li>СКБ-online — это удобный и современный интернет-банк и мобильное приложение.</li>
 			<li>Подключение и использование СКБ-online бесплатно.</li>
 		</ul>
-		<p>App Store</p>
-		<p>Google Play</p>
+		<div class="skb-online-stores">
+			<img src="/include/big_app_store_hover.svg">
+			<img src="/include/big_google_play_hover.svg">
+		</div>
 	</div>
 </div>

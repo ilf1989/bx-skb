@@ -20,17 +20,16 @@ $this->addExternalJs($this->GetFolder().'/js/owl.carousel.min.js');
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<div class="card-slide" style="background: #f2f2f2 url('/local/templates/skbbank/components/bitrix/news.list/cards_slider/images/card_back.svg') 100% 100% no-repeat;">
 		<div class="card-slide-left">
-			<h2 class="card-slide-title"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h2><br />
+			<h2 class="card-slide-title"><?=$arItem["NAME"]?></h2>
 			<p class="card-slide-text"><?=$arItem["PREVIEW_TEXT"];?></p>
-			<br>
 			<div class="card-slide-offer-block">
 				<div class="card-slide-offer">
-					<p><?=$arItem["PROPERTIES"]["OFFER_1"]["VALUE"]?></p>
-					<p><?=$arItem["PROPERTIES"]["TEXT_1"]["VALUE"]?></p>
+					<p class="card-slide-offer-1"><?=$arItem["PROPERTIES"]["OFFER_1"]["VALUE"]?></p>
+					<p class="card-slide-text-1"><?=$arItem["PROPERTIES"]["TEXT_1"]["VALUE"]?></p>
 				</div>
 				<div class="card-slide-offer">
-					<p><?=$arItem["PROPERTIES"]["OFFER_2"]["VALUE"]?></p>
-					<p><?=$arItem["PROPERTIES"]["TEXT_2"]["VALUE"]?></p>
+					<p class="card-slide-offer-2"><?=$arItem["PROPERTIES"]["OFFER_2"]["VALUE"]?></p>
+					<p class="card-slide-text-2"><?=$arItem["PROPERTIES"]["TEXT_2"]["VALUE"]?></p>
 				</div>
 			</div>
 			<button class="card-slide-btn">Оформить карту</button>

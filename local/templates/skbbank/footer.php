@@ -74,20 +74,9 @@
 						<div class="footer-contact-link">
 							<a href="#">Обратная связь</a>
 						</div>
-						<div class="schedule">
-						<?$APPLICATION->IncludeFile(
-									SITE_DIR."include/shedule.php",
-									Array(),
-									Array("MODE"=>"html")
-								);?>
+						<div class="footer-contact-image">
+							<img src="/include/care.png">
 						</div>
-						
-						<div id="support">
-							<div id="support-question"></div>
-							<b class="r0"></b>
-							<div id="support-text"><a href="<?=SITE_DIR?>contacts/feedback.php"><?=GetMessage("HDR_ASK")?></a></div>	
-							<b class="r0"></b>
-						</div>						
 					</div>
 				</div>
 		<div class="footer-bottom">
@@ -101,7 +90,7 @@
 				<a href="#">Информация о максимальных процентных ставках по вкладам физических лиц</a>
 			</div>
 			<div class="footer-link-block">
-				<a href="#">Наш акционер Синара</a>
+				<a href="#">Наш акционер <img src="/include/sinara.png"></a>
 				<p>Банковская группа СКБ-банка:</p>
 				<a class="footer-link-skb" href="#">СКБ-банк</a>
 				<a class="footer-link-skb" href="#">СКБ-финанс</a>
@@ -109,6 +98,7 @@
 				<a class="footer-link-skb" href="#">SKB LAB</a>
 			</div>				
 		</div>
+		</footer>
 		<div class="footer-full-banner">
 			<div class="footer-banner">
 				<div class="copyright">
@@ -135,6 +125,5 @@
 				<div class="footer-webmaster">Разработал Илья Федоров</div>
 			</div>
 		</div>
-		</footer>
-	</body>
+</body>
 </html>

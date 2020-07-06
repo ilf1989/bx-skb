@@ -19,7 +19,7 @@ $this->addExternalJs($this->GetFolder().'/js/owl.carousel.min.js');
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<div class="event-slide">
 		<div class="event-slide-left">
-			<h2 class="event-slide-title"><a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><?echo $arItem["NAME"]?></a></h2><br />
+			<h2 class="event-slide-title"><?echo $arItem["NAME"]?></h2><br />
 			<p class="event-slide-text"><?echo $arItem["PREVIEW_TEXT"];?></p>
 			<br>
 			<button class="event-slide-btn"><a href="<?echo $arItem["CODE"]?>">Узнать больше</a></button>

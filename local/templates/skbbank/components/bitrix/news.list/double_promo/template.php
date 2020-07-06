@@ -18,7 +18,7 @@ $this->setFrameMode(true);
 	<pre style="display:none;"><?print_r($arItem)?></pre>
 		<div class="double-promo-block" style="background: #f2f2f2 url('<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>') 100% 100% no-repeat;">
 			<div class="double-promo-info">
-				<h2 class="double-promo-title"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h2>
+				<h2 class="double-promo-title"><?=$arItem["NAME"]?></h2>
 				<br>
 				<p class="double-promo-text"><?=$arItem["PROPERTIES"]["DESC"]["VALUE"];?></p>
 				<br>

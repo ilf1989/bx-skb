@@ -16,7 +16,7 @@ $this->setFrameMode(true);
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<div class="main-promo">
 		<div class="main-promo-left">
-			<h2 class="main-promo-title"><a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><?echo $arItem["NAME"]?></a></h2><br />
+			<h2 class="main-promo-title"><?echo $arItem["NAME"]?></h2><br />
 			<p class="main-promo-text"><?=$arItem["PREVIEW_TEXT"];?></p>
 			<br>
 			<button class="main-promo-btn"><a href="<?echo $arItem["CODE"]?>">Узнать больше</a></button>

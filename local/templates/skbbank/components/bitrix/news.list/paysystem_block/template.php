@@ -18,9 +18,10 @@ $this->setFrameMode(true);
 		<p>Быстрый способ перевести деньги без открытия счетов за 15 минут. Просто приходите в один из офисов СКБ-банка с паспортом</p>
 	</div>
 	<div class="service-preview-right">
-		<img src="<?=CFile::GetPath($arResult["PROPERTIES"]["AD_IMAGE"]["VALUE"])?>">
+		<img src="/upload/iblock/b82/b8258ac85edf220584547e11d018b83a.png">
 	</div>
 </div>
+<h2 class="paysystem-title">Системы платежных сервисов</h2>
 <div class="paysystem-block">
 	<div class="paysystem-legend">
 		<div>Система</div>
@@ -30,7 +31,6 @@ $this->setFrameMode(true);
 		<div>Скорость</div>
 	</div>
 <?foreach($arResult["ITEMS"] as $arItem):?>
-	<pre style="display:none;"><?print_r($arItem);?></pre>
 	<div class="paysystem-item">
 		<div class="paysystem-pic"><img src="<?=CFile::GetPath($arItem["PROPERTIES"]["PAY_PIC"]["VALUE"])?>"></div>
 		<div class="paysystem-where"><?=$arItem["PROPERTIES"]["PAY_WHERE"]["VALUE"]?></div>
